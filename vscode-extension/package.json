@@ -1,0 +1,30 @@
+{
+  "name": "sage-assistant",
+  "displayName": "Sage",
+  "description": "Din lokala AI-kodassistent",
+  "publisher": "sage",
+  "version": "0.0.1",
+  "engines": { "vscode": "^1.80.0" },
+  "activationEvents": ["onStartupFinished"],
+  "main": "./extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "sage-container",
+          "title": "Sage",
+          "icon": "./icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "sage-container": [
+        {
+          "type": "webview",
+          "id": "sage.chatView",
+          "name": "Sage"
+        }
+      ]
+    }
+  }
+}
